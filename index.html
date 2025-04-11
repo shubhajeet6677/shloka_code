@@ -1,0 +1,305 @@
+TATSAM-1.png<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>तत्सम - The Hindi Society of NSUT</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body data-theme="dark">
+    <div class="landing-section">
+        <div class="landing-content">
+            <div class="logo-animation">
+                <img src="logo1.png" alt="तत्सम Logo" class="animated-logo">
+            </div>
+            <h1 class="landing-title">तत्सम</h1>
+            <p class="landing-subtitle">The Hindi Society of NSUT</p>
+        </div>
+    </div>
+    <!-- Theme Toggle -->
+    <div class="theme-toggle">
+        <button onclick="toggleTheme()" class="theme-btn">
+            <i class="fas fa-moon"></i>
+        </button>
+    </div>
+
+    <!-- Audio Controls -->
+    <div class="audio-toggle">
+        <button onclick="toggleAudio()" class="audio-btn">
+            <i class="fas fa-volume-up"></i>
+        </button>
+    </div>
+
+    <!-- Background Audio -->
+    <audio id="bgMusic" loop>
+        <source src="zen.mp3" type="mpeg">
+    </audio>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo-container">
+            <img src="logo1.png" alt="तत्सम Logo" class="logo-img">
+            <h1 class="typewriter">तत्सम - The Hindi Society of NSUT</h1>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#about" class="en">About Us</a><a href="#about" class="hi">हमारे बारे में</a></li>
+            <li><a href="#events" class="en">Events</a><a href="#events" class="hi">कार्यक्रम</a></li>
+            <li><a href="#members" class="en">Members' Corner</a><a href="#members" class="hi">सदस्यों का कोना</a></li>
+            <li><a href="#blog" class="en">Blog</a><a href="#blog" class="hi">ब्लॉग</a></li>
+        </ul>
+    </nav>
+
+    <!-- Language Toggle -->
+    <div class="language-toggle">
+        <button onclick="toggleLanguage()" class="lang-btn">
+            <span class="current-lang">EN</span>
+        </button>
+    </div>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <h2 class="en">About Us</h2>
+        <h2 class="hi">हमारे बारे में</h2>
+        <div class="about-content">
+            <div class="about-text">
+                <p class="en">We are a vibrant community dedicated to fostering creativity, leadership, and personal growth among students.</p>
+                <p class="hi">हम छात्रों के बीच रचनात्मकता, नेतृत्व और व्यक्तिगत विकास को बढ़ावा देने के लिए समर्पित एक जीवंत समुदाय हैं।</p>
+            </div>
+            <div class="about-image">
+                <img src="https://via.placeholder.com/400x300" alt="About Us">
+            </div>
+        </div>
+    </section>
+
+    <!-- Events Section -->
+    <section id="events" class="section">
+        <h2 class="section-title">Events</h2>
+        <div class="events-container">
+            <div class="events-grid">
+                <!-- Event Card 10 -->
+                <div class="event-card" data-event-id="10">
+                    <img src="Hindi Film Festival(01.05.2024).jpg" alt="Hindi Film Festival">
+                    <h3>Hindi Film Festival</h3>
+                </div>
+
+                <!-- Event Card 9 -->
+                <div class="event-card" data-event-id="9">
+                    <img src="Indian Cuisine Workshop(25.04.2024).jpg" alt="Indian Cuisine Workshop">
+                    <h3>Indian Cuisine Workshop</h3>
+                </div>
+
+                <!-- Event Card 8 -->
+                <div class="event-card" data-event-id="8">
+                    <img src="Hindi Quiz Competition(20.04.2024).jpg" alt="Hindi Quiz Competition">
+                    <h3>Hindi Quiz Competition</h3>
+                </div>
+
+                <!-- Event Card 7 -->
+                <div class="event-card" data-event-id="7">
+                    <img src="Indian Art Exhibition(15.04.2024).jpg" alt="Indian Art Exhibition">
+                    <h3>Indian Art Exhibition</h3>
+                </div>
+
+                <!-- Event Card 6 -->
+                <div class="event-card" data-event-id="6">
+                    <img src="Hindi Storytelling Session(10.04.2024).jpg" alt="Hindi Storytelling Session">
+                    <h3>Hindi Storytelling Session</h3>
+                </div>
+
+                <!-- Event Card 5 -->
+                <div class="event-card" data-event-id="5">
+                    <img src="Indian Classical Music Concert(05.04.2024).jpg" alt="Indian Classical Music Concert">
+                    <h3>Indian Classical Music Concert</h3>
+                </div>
+
+                <!-- Event Card 4 -->
+                <div class="event-card" data-event-id="4">
+                    <img src="Hindi Debate Competition(01.04.2024).jpg" alt="Hindi Debate Competition">
+                    <h3>Hindi Debate Competition</h3>
+                </div>
+
+                <!-- Event Card 3 -->
+                <div class="event-card" data-event-id="3">
+                    <img src="Bollywood Dance Workshop(25.03.2024).jpg" alt="Bollywood Dance Workshop">
+                    <h3>Bollywood Dance Workshop</h3>
+                </div>
+
+                <!-- Event Card 2 -->
+                <div class="event-card" data-event-id="2">
+                    <img src="Hindi Poetry Slam(20.03.2024).jpg" alt="Hindi Poetry Slam">
+                    <h3>Hindi Poetry Slam</h3>
+                </div>
+
+                <!-- Event Card 1 -->
+                <div class="event-card" data-event-id="1">
+                    <img src="Cultural Night(15.03.2024).jpg" alt="Cultural Night">
+                    <h3>Cultural Night</h3>
+                </div>
+            </div>
+            <button class="scroll-btn left-btn"><i class="fas fa-chevron-left"></i></button>
+            <button class="scroll-btn right-btn"><i class="fas fa-chevron-right"></i></button>
+        </div>
+    </section>
+
+    <!-- Event Modal -->
+    <div class="event-modal" id="eventModal">
+        <div class="modal-content">
+            <button class="close-modal"><i class="fas fa-times"></i></button>
+            <div class="modal-grid">
+                <div class="modal-image">
+                    <img src="" alt="Event Image">
+                </div>
+                <div class="modal-details">
+                    <h2 class="modal-title"></h2>
+                    <div class="event-details">
+                        <ul>
+                            <li><i class="fas fa-calendar"></i> <span class="event-date"></span></li>
+                            <li><i class="fas fa-clock"></i> <span class="event-time"></span></li>
+                            <li><i class="fas fa-map-marker-alt"></i> <span class="event-venue"></span></li>
+                        </ul>
+                    </div>
+                    <p class="event-description"></p>
+                    <button class="register-btn">Register Now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="section">
+        <h2 class="en">Gallery</h2>
+        <h2 class="hi">गैलरी</h2>
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="Hindi Film Festival(01.05.2024).jpg" alt="Hindi Film Festival">
+                <div class="gallery-caption">Hindi Film Festival</div>
+            </div>
+            <div class="gallery-item">
+                <img src="Indian Cuisine Workshop(25.04.2024).jpg" alt="Indian Cuisine Workshop">
+                <div class="gallery-caption">Indian Cuisine Workshop</div>
+            </div>
+            <div class="gallery-item">
+                <img src="Hindi Quiz Competition(20.04.2024).jpg" alt="Hindi Quiz Competition">
+                <div class="gallery-caption">Hindi Quiz Competition</div>
+            </div>
+            <div class="gallery-item">
+                <img src="Indian Art Exhibition(15.04.2024).jpg" alt="Indian Art Exhibition">
+                <div class="gallery-caption">Indian Art Exhibition</div>
+            </div>
+            <div class="gallery-item">
+                <img src="Hindi Storytelling Session(10.04.2024).jpg" alt="Hindi Storytelling Session">
+                <div class="gallery-caption">Hindi Storytelling Session</div>
+            </div>
+            <div class="gallery-item">
+                <img src="Indian Classical Music Concert(05.04.2024).jpg" alt="Indian Classical Music Concert">
+                <div class="gallery-caption">Indian Classical Music Concert</div>
+            </div>
+            <div class="gallery-item">
+                <img src="Hindi Debate Competition(01.04.2024).jpg" alt="Hindi Debate Competition">
+                <div class="gallery-caption">Hindi Debate Competition</div>
+            </div>
+            <div class="gallery-item">
+                <img src="Bollywood Dance Workshop(25.03.2024).jpg" alt="Bollywood Dance Workshop">
+                <div class="gallery-caption">Bollywood Dance Workshop</div>
+            </div>
+            <div class="gallery-item">
+                <img src="Hindi Poetry Slam(20.03.2024).jpg" alt="Hindi Poetry Slam">
+                <div class="gallery-caption">Hindi Poetry Slam</div>
+            </div>
+            <div class="gallery-item">
+                <img src="Cultural Night(15.03.2024).jpg" alt="Cultural Night">
+                <div class="gallery-caption">Cultural Night</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Members' Corner -->
+    <section id="members" class="section">
+        <h2 class="en">Members' Corner</h2>
+        <h2 class="hi">सदस्यों का कोना</h2>
+        <div class="members-content">
+            <div class="member-benefits">
+                <h3 class="en">Member Benefits</h3>
+                <h3 class="hi">सदस्य लाभ</h3>
+                <ul>
+                    <li class="en">Exclusive access to events</li>
+                    <li class="hi">कार्यक्रमों तक विशेष पहुंच</li>
+                    <li class="en">Networking opportunities</li>
+                    <li class="hi">नेटवर्किंग के अवसर</li>
+                    <li class="en">Leadership development</li>
+                    <li class="hi">नेतृत्व विकास</li>
+                </ul>
+            </div>
+            <div class="join-form">
+                <h3 class="en">Join Us</h3>
+                <h3 class="hi">हमसे जुड़ें</h3>
+                <form id="joinForm">
+                    <input type="text" placeholder="Name" required>
+                    <input type="email" placeholder="Email" required>
+                    <button type="submit" class="en">Join Now</button>
+                    <button type="submit" class="hi">अभी जुड़ें</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog" class="section">
+        <h2 class="en">Latest Blog Posts</h2>
+        <h2 class="hi">नवीनतम ब्लॉग पोस्ट</h2>
+        <div class="blog-grid">
+            <article class="blog-card">
+                <img src="https://via.placeholder.com/300x200" alt="Blog 1">
+                <h3 class="en">The Future of Technology</h3>
+                <h3 class="hi">प्रौद्योगिकी का भविष्य</h3>
+                <p class="en">Exploring upcoming trends in technology...</p>
+                <p class="hi">प्रौद्योगिकी में आने वाले रुझानों की खोज...</p>
+            </article>
+            <article class="blog-card">
+                <img src="https://via.placeholder.com/300x200" alt="Blog 2">
+                <h3 class="en">Leadership Skills</h3>
+                <h3 class="hi">नेतृत्व कौशल</h3>
+                <p class="en">Essential skills for future leaders...</p>
+                <p class="hi">भविष्य के नेताओं के लिए आवश्यक कौशल...</p>
+            </article>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section id="newsletter" class="section">
+        <div class="newsletter-content">
+            <h2 class="en">Subscribe to Our Newsletter</h2>
+            <h2 class="hi">हमारे न्यूजलेटर की सदस्यता लें</h2>
+            <form id="newsletterForm">
+                <input type="email" placeholder="Enter your email" required>
+                <button type="submit" class="en">Subscribe</button>
+                <button type="submit" class="hi">सदस्यता लें</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3 class="en">Follow Us</h3>
+                <h3 class="hi">हमें फॉलो करें</h3>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/tatsam.nsut" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="https://www.instagram.com/tatsam.nsut" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/company/tatsam/" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 
